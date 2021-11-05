@@ -75,8 +75,8 @@ async function playOneRound() {
     UI.showTimer(true);
 
     // start detecting player gestures
-    // required duration 2 seconds
-    detectPlayerGesture(1000);
+    // required duration 150ms ~ 4-5 camera frames
+    detectPlayerGesture(150);
 }
 
 function detectPlayerGesture(requiredDuration) {
@@ -188,7 +188,7 @@ function checkResult(playerGesture, computerGesture) {
     }
     else if(computerWins) {
         computerScore++;
-        statusText += " - Computer wins!";
+        statusText += " - The robot wins!";
     }
 
     UI.showRobotHand(true);
