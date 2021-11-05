@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A fun little game demo based on the [FingerPose gesture detection library](https://www.npmjs.com/package/http-server).
+A fun little game demo based on the [Fingerpose gesture detection library](https://github.com/andypotato/fingerpose).
 
 ## Installation
 
