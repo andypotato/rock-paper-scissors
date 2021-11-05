@@ -4,6 +4,8 @@
 
 A fun little game demo based on the [Fingerpose gesture detection library](https://github.com/andypotato/fingerpose).
 
+[Play the demo here](https://andypotato.github.io/rock-paper-scissors/demo/)
+
 ## Installation
 
 - Clone this repo
