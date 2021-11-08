@@ -115,5 +115,10 @@ export const UI = {
                 };
             };
         });
-    }
+    },
+
+    isMobile: function() {
+        // remember kids: this is super unreliable
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    },
 }

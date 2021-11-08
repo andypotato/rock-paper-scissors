@@ -45,16 +45,27 @@ async function onInit() {
 // -----------------------------------------------------------------------------
 function waitForPlayer() {
 
-    // show a blinking "press key to start" message
-    UI.setStatusMessage("Press any key to start");
+    // show a blinking start message
+    if(UI.isMobile()) {
+        UI.setStatusMessage("Touch the screen to start");
+    } else {
+        UI.setStatusMessage("Press any key to start");
+    }
+
     UI.startAnimateMessage();
+
+    const startGame = () => {
+        UI.stopAnimateMessage();
+        playOneRound();        
+    };
 
     // wait for player to press any key
     // then stop blinking and play one round
-    window.addEventListener("keypress", () => {
-        UI.stopAnimateMessage();
-        playOneRound();
-    }, { once: true });
+    if(UI.isMobile()) {
+        document.addEventListener('touchstart', startGame, { once: true }); 
+    } else {
+        window.addEventListener("keypress", startGame, { once: true });
+    }    
 }
 
 async function playOneRound() {
